@@ -6,7 +6,8 @@ MAINTAINER Paul Blischak <blischak.4@osu.edu>
 
 # Run update and then install C/C++ compilers and make
 RUN apt-get update -qq \
-  && apt-get install -y gcc \
+  && apt-get install -qq -y \
+                     gcc \
                      g++ \
                      make \
                      git \
