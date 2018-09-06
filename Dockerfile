@@ -6,7 +6,7 @@ MAINTAINER Paul Blischak <blischak.4@osu.edu>
 
 # Run update and then install C/C++ compilers and make
 RUN apt-get update -qq \
-  && DEBIAN_FRONTEND=noninteractive apt-get install -qq -y \
+  && apt-get install -qq -y \
                      gcc \
                      g++ \
                      make \
@@ -20,12 +20,11 @@ RUN apt-get update -qq \
                      libncursesw5-dev \
                      libssl-dev \
                      libsqlite3-dev \
-                     tk-dev \
                      libgdbm-dev \
                      libc6-dev \
                      libbz2-dev \
                      python-pip \
-                     mafft
+                     mafft && DEBIAN_FRONTEND=noninteractive apt-get tk-dev
 
 # Install necessary python package
 WORKDIR /tmp
