@@ -24,7 +24,7 @@ RUN apt-get update -qq \
                      libc6-dev \
                      libbz2-dev \
                      python-pip \
-                     mafft && DEBIAN_FRONTEND=noninteractive apt-get tk-dev
+                     mafft && DEBIAN_FRONTEND=noninteractive apt-get install tk-dev
 
 # Install necessary python package
 WORKDIR /tmp
