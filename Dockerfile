@@ -29,8 +29,9 @@ RUN apt-get update -qq \
 
 # Install necessary python package
 WORKDIR /tmp
-RUN pip install -q --upgrade pip \
-  && pip install -q -U biopython cython numpy pandas
+#RUN pip install -q --upgrade pip \
+#  && pip install -q -U biopython cython numpy pandas
+RUN pip install -q -U biopython cython numpy pandas
 
 # Install Phyutility
 WORKDIR /home
